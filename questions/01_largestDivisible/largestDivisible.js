@@ -4,9 +4,25 @@ write the largestDivisible function
 
 */
 
-function largestDivisible(arr, num) {}
+function largestDivisible(arr, num) {
+    var array = [];
+    arr.forEach(divisible=>{
+      if (divisible % num === 0) {
+        array.push(divisible);
+      }
+    })
+    if (array.length === 0) {
+      return null;
+    }
+    return solution =  array.sort().reduce((large, largest) =>{
+      if (large < largest){
+        
+        return largest;
+      }
+    })
+    
+  }
 
-// console.log(largestDivisible([1, 2, 3, 4, 5, 6, 7], 3));//6
-// console.log(largestDivisible([1], 2));//null
-
+  
+  
 module.exports = { largestDivisible };
