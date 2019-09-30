@@ -17,12 +17,14 @@ returns { a: 1, c: 42};
 */
 
 function pluck(obj, elements) {
-  const newObj = {};
-  elements.forEach(el => {
-    if (obj[el] !== undefined) newObj[el] = obj[el];
-  });
+  
+function pluck(obj, elements) {
+  // const newObj = {};
+  // elements.forEach(el => {
+  //   if (obj[el] !== undefined) newObj[el] = obj[el];
+  // });
 
-  return newObj;
+  // return newObj;
 }
 
 module.exports = { pluck };
