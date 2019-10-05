@@ -8,12 +8,17 @@ zip([
 */
 
 function zip(objs) {
-  var newObj = {}
-  for (var key in objs){
-    for (var i in objs[key]) {
+return objs.reduce((curr, accum) => {
+  for (const key in curr) {
+    if (key in accum) {
+      accum[key] += curr[key];
+    } else {
+      accum[key] = curr[key];
     }
-    console.log(objs[key]);
   }
+  return accum;
+})
 }
+
 
 module.exports = { zip };

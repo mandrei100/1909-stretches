@@ -27,13 +27,20 @@ productWhichMadeMostMoney returns an object with an id for that product and a to
 //write the productWhichMadeMostMoney function
 
 function bestSales(sales) {
-  var newObj = {};
-  sales.forEach(element => {
-    element.reduce((a,b)=>{
-    return a+b;
-    ))
-
-  return sum;
+  let newObj = {};
+  let key;
+  let value;
+  var array = [];
+  for (var i in sales) {
+    for (var j in sales) {
+      if (sales[i].productId === sales[j].productId) {
+        key = sales[i].productId;
+        value = sales[i].amount + sales[j].amount;
+      }
+    }
+    newObj[key] = value;
+  }
+  return newObj;
 }
 
 console.log(bestSales(sales));
