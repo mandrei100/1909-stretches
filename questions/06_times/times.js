@@ -1,14 +1,27 @@
 function times() {
-    
+    // if (typeof num !== 'number') throw "Numbers Only";
+    // return function (nextNum) {
+    //     return num * nextNum
+    // }
+    if (typeof num !== 'number') throw "Numbers Only";
     var arr = [...times.arguments];
-    return arr.reduce((a,b) => {
-      if (typeof a === 'number' && typeof b === 'number') {
-        return a*b;
-      } else {
-        return 'Numbers only!';
-      }
-      
+    return solution(arr => {
+        console.log(arr);
     })
+
+
+    // var arr = [...times.arguments];
+    // if (arr.length === 0 ) {
+    //     throw "Numbers Only";
+    // }
+    // if (typeof a !== 'number' && typeof b !== 'number') {
+    //     throw "Numbers Only";
+    // }
+    // return arr.reduce((a,b) => {
+      
+    //     return a*b;
+      
+    // })
 }
 
 
