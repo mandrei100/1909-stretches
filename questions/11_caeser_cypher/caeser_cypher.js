@@ -99,6 +99,10 @@ const encryptString = (str, shift) => {
         charCode += 26;
       }
     }
+    if (charCode >= 97 && charCode <= 122){
+      charaCode += alphaShift;
+      if (charCode)
+    }
   }
 }
 
